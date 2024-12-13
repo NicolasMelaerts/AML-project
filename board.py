@@ -2,11 +2,13 @@ import chess
 import matplotlib.pyplot as plt
 import numpy as np
 from chess import Move
+from chess_board_generator import ChessBoardGenerator
 
 class ChessBoard:
-    def __init__(self):
+    def __init__(self, board):
         # Créer un plateau avec uniquement le roi du joueur et la dame
-        self.board = chess.Board(f"8/8/Q7/8/8/8/8/5K1k w - - 0 1")
+        #self.board = chess.Board(f"8/8/Q7/8/8/8/8/5K1k w - - 0 1")
+        self.board = board
     
     def display(self):
         # Créer un tableau de 8x8 pour le plateau

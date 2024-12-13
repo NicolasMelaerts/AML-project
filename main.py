@@ -3,9 +3,14 @@ from q_learning import update_q, get_state_index, get_best_move
 import time
 from chess import Move
 import random
+from chess_board_generator import ChessBoardGenerator
+
+generator = ChessBoardGenerator()
+positions = generator.generate_database(1)
+RANDOM_BOARD = positions[0]  # plateau aléatoire
 
 # Initialisation du jeu et des paramètres de Q-learning
-board = ChessBoard()  # Création du plateau à l'extérieur de la boucle
+board = ChessBoard(RANDOM_BOARD)  # Création du plateau à l'extérieur de la boucle
 episodes = 1000
 epsilon = 0.1  # Taux d'exploration
 alpha = 0.1  # Taux d'apprentissage
@@ -16,7 +21,7 @@ def train_q_learning(episodes):
         print(f"\n=== Épisode {episode + 1} ===")
         
         # Réinitialisation du jeu à chaque épisode
-        board = ChessBoard()  # Réinitialisation du plateau de jeu
+        board = ChessBoard(RANDOM_BOARD)  # Réinitialisation du plateau de jeu
         state = get_state_index(board)
 
         done = False
