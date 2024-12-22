@@ -4,8 +4,6 @@ from agent_q_learning import QLearningAgent
 
 def make_q_learning_test(all_fen, episodes, nb_episodes):
 
-    nb_fen = len(all_fen)
-
     # Liste des configurations d'agents
     agent_configurations = [
         {"alpha": 0.3, "gamma": 0.7, "epsilon": 0.5},  # Agent 1 : fort taux d'exploration
