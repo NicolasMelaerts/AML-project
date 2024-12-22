@@ -20,8 +20,8 @@ def plot_q_learning_results(mates_found_per_agent, episodes, nb_episodes, agents
         plt.plot(range(nb_episodes), mates_found, label=f'{label} - Mats trouvés')
 
     plt.xlabel(f'Nombre d\'épisodes * {episodes}')
-    plt.ylabel('Nombre de mats trouvés / Partie terminée après 30 coups')
-    plt.title('Nombre de mats trouvés et parties terminées après 30 coups')
+    plt.ylabel('Nombre de mats trouvés')
+    plt.title('Nombre de mats trouvés')
     plt.legend()
     plt.show()
 
