@@ -22,7 +22,7 @@ This project explores the use of **Q-learning** and **Approximate Q-learning** t
 
 ## 🧰 Tools & Technologies  
 - **Python**  
-- `numpy`, `matplotlib`, `python-chess`  
+- `numpy`, `matplotlib`, `python-chess`, `scikit-learn`
 
 ---
 
